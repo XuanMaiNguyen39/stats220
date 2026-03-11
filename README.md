@@ -1,11 +1,17 @@
 # stats220
 
-This is my repo for STATS 220. 
+## This is my repo for STATS 220. 
 
 A little about me:
 
-- I am undertaking a degree in Data Science
-- I am taking STATS 220 because I want to learn more about Data Technologies to support my career!
-- I am interested in learning about ways to utilise data and get insights from it.
+* I am undertaking a degree in Data Science
+* I am taking STATS 220 because I want to learn more about Data Technologies to support my career!
+* I am interested in learning about:
+1. Ways to utilise data and get insights from it.
+2. Technologies needed to work with data
+3. Industry/ research graded methodologies to deal with data
 
-A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
+My inspiration to study data:
+ ![](https://www.mckinsey.com/quarterly/the-five-fifty/five-fifty-the-data-driven-enterprise)
+
+A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/bKaHk897kVMAAAAj/chick-pio.gif)
