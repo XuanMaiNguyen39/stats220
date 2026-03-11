@@ -13,5 +13,6 @@ A little about me:
 
 My inspiration to study data:
  <https://www.mckinsey.com/quarterly/the-five-fifty/five-fifty-the-data-driven-enterprise>
+[Another article](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-data-driven-enterprise-of-2025)
 
 A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/bKaHk897kVMAAAAj/chick-pio.gif)
