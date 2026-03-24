@@ -16,7 +16,7 @@ head {
 }
 
 body {
-        background-color: white;
+        background-color: lightgrey;
         font-family: 'Indie Flower', sans-serif;
     }
     h2 {
