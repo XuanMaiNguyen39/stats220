@@ -5,7 +5,8 @@ output: html_fragment
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
-library(tidyverse)
+install.packages("tidyverse")
+suppressPackageStartupMessages(library(tidyverse))
 ```
 
 ```{css}
