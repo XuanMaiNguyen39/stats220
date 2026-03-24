@@ -5,7 +5,6 @@ output: html_fragment
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
-suppressPackageStartupMessages(library(tidyverse))
 ```
 
 ```{css}
@@ -35,6 +34,7 @@ body {
 This data records congestion status on NX2 buses from Smales Farm to UoA throughout the week. Looking into the dataframe's structure we see 20 bus trips and 5 columns: time of the record, full seats status, time period of the bus, number of people standing, and the weekday of the bus trip. We have 20 bus trips recorded and 5 columns. 
 
 ```{r}
+suppressPackageStartupMessages(library(tidyverse)) 
 logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTM_q8Spw55ImrUv6zcjuWx5TqmZ-B1x5kAsCCM9eK5RK1P9tYjlTIO_KIqYeMajrH7McnLzPHBtJI6/pub?gid=378957877&single=true&output=csv") 
 
 latest_data <- rename(logged_data,
