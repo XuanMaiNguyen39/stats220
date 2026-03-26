@@ -36,8 +36,9 @@ body {
 
 ## Congestion status of NX2 buses from Smales Farm to University of Auckland
 
-This data records congestion status on NX2 buses from Smales Farm to UoA throughout the week. Looking into the dataframe's structure we see 20 bus trips and 5 columns: time of the record, full seats status, time period of the bus, number of people standing, and the weekday of the bus trip. We have 20 bus trips recorded and 5 columns. 
+This data records congestion status on NX2 buses from Smales Farm to the CBD and back, throughout the week. This topic was chosen to analyse the pattern behind surpluses on NX2 buses, as many people have to stand on some bus trips while some other trips have plenty of seats left. Analysing the time and the number of people standing reveals the congestion data, helping us to see into the status. Congestion here is recorded by the number of people that have to stand (no seats left) on a bus. From experience, congestion can means many situations, many times there were only a few people that stands, sometimes lots of people have to stand. Rarely but does exist is when the driver needs to reject getting more people on the bus due to reaching max capacity.
 
+Looking into the dataframe's structure we see 20 bus trips and 5 columns: time of the record, full seats status, time period of the bus, number of people standing, and the weekday of the bus trip. We have 20 bus trips recorded and 5 columns. From these data we will analyse the congestion status and the time it happended.
 ```{r}
 logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTM_q8Spw55ImrUv6zcjuWx5TqmZ-B1x5kAsCCM9eK5RK1P9tYjlTIO_KIqYeMajrH7McnLzPHBtJI6/pub?gid=378957877&single=true&output=csv") 
 
