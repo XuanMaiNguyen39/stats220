@@ -5,11 +5,7 @@ output: html_fragment
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
-suppressPackageStartupMessages({
-  library(readr)
-  library(dplyr)
-  library(ggplot2)
-})
+suppressPackageStartupMessages(library(tidyverse))
 ```
 
 ```{css}
@@ -39,6 +35,7 @@ body {
 This data records congestion status on NX2 buses from Smales Farm to the CBD and back, throughout the week. This topic was chosen to analyse the pattern behind surpluses on NX2 buses, as many people have to stand on some bus trips while some other trips have plenty of seats left. Analysing the time and the number of people standing reveals the congestion data, helping us to see into the status. Congestion here is recorded by the number of people that have to stand (no seats left) on a bus. From experience, congestion can means many situations, many times there were only a few people that stands, sometimes lots of people have to stand. Rarely but does exist is when the driver needs to reject getting more people on the bus due to reaching max capacity.
 
 Looking into the dataframe's structure we see 20 bus trips and 5 columns: time of the record, full seats status, time period of the bus, number of people standing, and the weekday of the bus trip. We have 20 bus trips recorded and 5 columns. From these data we will analyse the congestion status and the time it happended.
+
 ```{r}
 logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTM_q8Spw55ImrUv6zcjuWx5TqmZ-B1x5kAsCCM9eK5RK1P9tYjlTIO_KIqYeMajrH7McnLzPHBtJI6/pub?gid=378957877&single=true&output=csv") 
 
@@ -59,22 +56,21 @@ We only have one numeric variable and that is from the number of people standing
 average_stand <- latest_data$number_standing %>%
   mean(na.rm = TRUE) %>%
   round(1)
-median_stand <- latest_data$number_standing %>%
-  median(na.rm = TRUE)
 max_stand <- latest_data$number_standing %>%
   max(na.rm = TRUE)
 min_stand <- latest_data$number_standing %>%
   min(na.rm = TRUE)
 
 paste("===SUMMARY STATISTICS ON NUMBER OF PEOPLE THAT STANDS===")
-paste("The average number of people that stand are: ", average_stand)
-paste("The minimum number of people that stand are: ", min_stand)
-paste("The maximum number of people that stands are: ", max_stand)
+paste("From our sample, the average number of surplus (people that have to stand on the bus) is: ", average_stand, 'people')
+paste("The minimum number of people that have to stand is", min_stand, 'people', 'while the maximum is', max_stand, 'people')
 
 echo=FALSE
 ```
-On average, there are around more than 8 people that have to stand, so the bus tends to carry 8 more people than the seats number. There are bus trips where everyone has a seat but there are times when 25 people must stand, 25 is consider quite a large number of people.
-The main insight here is that, in the sample, NX2 buses tends to carry more people than it planned, however a surplus of 8 people can fit on a bus and not worth investing another empty bus to accomodate them. 
+**INSIGHT** 
+
+On average, there are around more than 8 people that have to stand, so the bus tends to carry 8 more people than the planned number of seats. There are bus trips where everyone has a seat but there are times when 25 people must stand, 25 is consider quite a large number of people.
+The main insight here is that, in the sample, NX2 buses tends to carry more people than it planned, however a surplus of 8 people can fit on a bus and we might not invest another empty bus to accomodate them unless we have lots of spare resources. 
 
 ### Discover distributions
 The bar chart belows shows us the distributions of the other 3 variables, besides number of people standing. This will give us a whole complete picture of what the data shows. 
